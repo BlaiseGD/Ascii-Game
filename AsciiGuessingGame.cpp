@@ -10,10 +10,10 @@ int main(){
 
     while(lives != 0){
         srand(time(NULL));
-        random_device rd; //gets a random number from hardware
-        mt19937 gen(rd()); //seeds the generation
+        random_device rand; //gets a random number from hardware
+        mt19937 gen(rand()); // defines seed for generator
         uniform_int_distribution<> distr(33,126); //defines range
-        int randNum = distr(gen); //assign the randomly generated num to an int
+        int randNum = distr(gen); //assign the "randomly" generated num to an int
         cout << randNum << '\n'; 
         cout << "What is the character for this ascii value?\n";
 
